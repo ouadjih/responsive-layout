@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./assets/Style.css" rel="stylesheet" />
+    <script src="./assets/js/slider.js" defer></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="navbar">
+      <div class="first"><a href="#"><img class="logo" src="./assets/images/logoR.png" alt="Logo"></a></div>
+
+        <ul class="second">
+          <li class="link">one</li>
+          <li class="link">two</li>
+          <li class="link">three</li>
+          <li class="link">four</li>
+        </ul>
+        <div class="list" id="list">
+          <li class="link">one</li>
+          <li class="link">two</li>
+          <li class="link">three</li>
+          <li class="link">four</li>
+        </div>
+      <div class="third">
+          <button class="btn-order">My Orders</button>
+      <div class="btn-nav">
+          <img id="navbtn"  onCLick="toggleNav()"class="hamburger" src="./assets/images/hamburger.png" alt="menu" />
+          <img id="closebtn" onClick="toggleNav()"class="close" src="./assets/images/close.png" alt="close" />
+      </div>
+      </div>
+    </div>
+
+    <div class="hero">
+      <div class="containers">
+          <h1>Here you are Adding a Hero</h1>
+          <p>I've been searching for more then 3 monnths to provide you this information, you can add beautifull information here</p>
+          <div class="search" >
+            <input type="text" id="search" placeholder="search topics ...">
+            <i class="fa-solid fa-magnifying-glass" style="position: relative; margin-top: -30px; margin-left:320px"></i>
+            <div class="search_bx2"></div>
+          </div>
+      </div>
+  </div>
+
+  <div class="container">
+    <h2 class="title-2">New Products:</h2>
+    <p class="text-description">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Quasi labore aliquid fuga quam modi tempore nihil magni assumenda! Necessitatibus, molestiae!
+    </p>
+    <!-- New product slider -->
+    <div class="slider-container" id="new-products">
+      <div class="slides-wrapper">
+        <div class="slides-container">
+          <ul class="slider-list">
+            <li class="slider-item">
+              <a href="#">
+                <img src="./assets/images/new-product-1.jpg" alt="New Product 1" />
+              </a>
+            </li>
+            <li class="slider-item">
+              <a href="#">
+                <img src="./assets/images/new-product-2.jpg" alt="New Product 2" />
+              </a>
+            </li>
+            <li class="slider-item">
+              <a href="#">
+                <img src="./assets/images/new-product-3.jpg" alt="New Product 3" />
+              </a>
+            </li>
+            <li class="slider-item">
+              <a href="#">
+                <img src="./assets/images/new-product-4.jpg" alt="New Product 4" />
+              </a>
+            </li>
+            <li class="slider-item">
+              <a href="#">
+                <img src="./assets/images/new-product-5.jpg" alt="New Product 5" />
+              </a>
+            </li>
+            <li class="slider-item">
+              <a href="#">
+                <img src="./assets/images/new-product-6.jpg" alt="New Product 6" />
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="slider-arrows">
+        <button type="button" class="slider-arrow-prev">Prev</button>
+        <button type="button" class="slider-arrow-next">Next</button>
+      </div>
+    </div>
+
+    <br>
+  </div>
+    <script>
+
+        const navbtn = document.getElementById("navbtn")
+        const closebtn = document.getElementById("closebtn")
+        const list = document.getElementById("list")
+
+        //navbtn.addEventListener("click",toggleNav)
+        function toggleNav(event){
+          //toggle nav menu
+          list.style.display === 'flex'?
+          list.style.display = "none":
+          list.style.display = "flex"
+
+          //toggle close open png
+          navbtn.style.display === "none"?
+          (navbtn.style.display = "block",closebtn.style.display="none"):
+          (navbtn.style.display = "none",closebtn.style.display="block")
+
+      
+        }
+        
+    </script>
+  </body>
+</html>
